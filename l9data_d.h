@@ -1,4 +1,4 @@
-#define BASEVERSION "050"
+#define BASEVERSION "050-msx"
 
 /*
  *  l9data_d.h
@@ -172,11 +172,18 @@ version_table[] =
 /*---------------------------> V2 <-----------------------*/
 
 /*
+ *  V2 Colossal Adventure, (c) ? Level 9
+ */
+
+    2, 0x6155, 0xe8, 0xe6f4, 0, "Colossal Adventure (MSX[A])",
+    2, 0x616a, 0x90, 0x7482, 0, "Colossal Adventure (MSX[B])",
+
+/*
  *  V2 Adventure Quest, (c) ? Level 9
  */
 
-  2, 0x5323, 0xb7, 0x8af7, 0, "Adventure Quest (CPC/Speccy)",
-    WANTED + 2, 0x0000, 0x00, 0x0000, 0, "Adventure Quest (MSX)",
+    2, 0x5323, 0xb7, 0x8af7, 0, "Adventure Quest (CPC/Speccy)",
+    2, 0x5323, 0x11, 0xaf28, 0, "Adventure Quest (MSX)",
 
 /*
  *  V2 Dungeon Adventure, (c) ? Level 9
@@ -201,8 +208,8 @@ version_table[] =
    (MSX & Speccy: only one byte different)
  */
     2, 0x5eb9, 0x30, 0xe99a, 0, "Lords of Time (CPC)",
-    2, 0x5eb9, 0x5d, 0xc098, 0, "Lords of Time (MSX)",
-    2, 0x5eb9, 0x6e, 0xc689, 0, "Lords of Time (Speccy)",
+    2, 0x5eb9, 0x5d, 0xc098, 0, "Lords of Time (MSX *corrupt*)",
+    2, 0x5eb9, 0x6e, 0xc689, 0, "Lords of Time (Speccy/MSX *fixed*)",
 
 /*
  *  V2 Snowball, (c) 83 Level 9
@@ -257,14 +264,13 @@ version_table[] =
  */
     2, 0x34b3, 0xc7, 0x9058, 0, "Erik the Viking (CPC)",
     WANTED + 2, 0x0000, 0x00, 0x0000, 0, "Erik the Viking (Atari)",
-    WANTED + 2, 0x0000, 0x00, 0x0000, 0, "Erik the Viking (MSX)",
+    2, 0x34b3, 0xa8, 0x2cf2, 0, "Erik the Viking (MSX *converted*)",
 
 /*
  *  V2 Emerald Isle, (c) 85 Level 9
  */
 
-    2, 0x63be, 0xd6, 0xcf5d, 0, "Emerald Isle (Atari/C-64/CPC/Speccy)",
-    WANTED + 2, 0x63be, 0x00, 0x0000, 0, "Emerald Isle (MSX)",
+    2, 0x63be, 0xd6, 0xcf5d, 0, "Emerald Isle (Atari/C-64/CPC/Speccy/MSX)",
 /* next one: longish difference with first, probably corruption */
     2, 0x63be, 0x0a, 0x21ed, 0, "Emerald Isle (MSX *corrupt*)",
     2, 0x378c, 0x8d, 0x3a21, 0, "Emerald Isle (BBC)",
@@ -285,7 +291,7 @@ version_table[] =
  */
 
 /* next two Speccy versions on same tape... */
-    3, 0x772b, 0xcd, 0xa503, 0, "Worm in Paradise (Speccy128)",
+    3, 0x772b, 0xcd, 0xa503, 0, "Worm in Paradise (Speccy128/MSX)",
     3, 0x546c, 0xb7, 0x9420, 0, "Worm in Paradise (Speccy48)",
 /*
    this version, although corrupt, seems to have been released by
@@ -298,7 +304,6 @@ version_table[] =
     3, 0x6d84, 0xc8, 0x943f, 0, "Worm in Paradise (C-64 *fixed*)",
     3, 0x6030, 0x47, 0x46ad, 0, "Worm in Paradise (CPC)",
     3, 0x5828, 0xbd, 0xe7cb, 0, "Worm in Paradise (BBC)",
-    WANTED + 3, 0x0000, 0x00, 0x0000, 0, "Worm in Paradise (MSX)",
 
 /*
  *  V3 Price of Magik, (c) 86 Level 9
@@ -315,7 +320,7 @@ version_table[] =
     3, 0x5aa4, 0xc1, 0x10a0, 2, "Price of Magik (Speccy48[v1])",
 /* next one has two byte difference to first one -- earlier version? */
     3, 0x5aa4, 0xc1, 0xeda4, 2, "Price of Magik (Speccy48[v2])",
-    WANTED + 3, 0x7334, 0x87, 0x0000, 2, "Price of Magik (MSX)",
+    3, 0x7334, 0x87, 0x8b5d, 2, "Price of Magik (MSX)",
     3, 0x6fc6, 0x14, 0xf9b6, 2, "Price of Magik (C-64)",
 /* next one: 5 bytes different from S48var, 3 bytes from S48 */
     3, 0x5aa4, 0xc1, 0xbbf4, 2, "Price of Magik (CPC)",
@@ -336,8 +341,8 @@ version_table[] =
     WANTED + 3, 0x0000, 0x00, 0x0000, 3, "Dungeon Adventure /JoD (Mac)",
 
     3, 0x6f70, 0x40, 0xbd91, 2, "Colossal Adventure /JoD (MSX)",
-    WANTED + 3, 0x0000, 0x00, 0x0000, 2, "Adventure Quest /JoD (MSX)",
-    WANTED + 3, 0x0000, 0x00, 0x0000, 2, "Dungeon Adventure /JoD (MSX)",
+    3, 0x6972, 0x55, 0x042e, 2, "Adventure Quest /JoD (MSX)",
+    3, 0x6dea, 0x50, 0xe4f7, 2, "Dungeon Adventure /JoD (MSX)",
 
     3, 0x6f6e, 0x78, 0x28cd, 2, "Colossal Adventure /JoD (Speccy128)",
     3, 0x6970, 0xd6, 0xa820, 2, "Adventure Quest /JoD (Speccy128)",
@@ -383,9 +388,9 @@ version_table[] =
     3, 0x7c55, 0x18, 0xdaee, 3, "Return to Eden /SD (Speccy128)",
     3, 0x7cd7, 0x0e, 0x4feb, 3, "Worm in Paradise /SD (CPC/Mac/PC/Speccy128/Speccy+3)",
 
-    3, 0x7363, 0x65, 0xa0ab, 3, "Snowball /SD (C-64)",
-    3, 0x772f, 0xca, 0x8602, 3, "Return to Eden /SD (C-64)",
-    3, 0x788d, 0x72, 0x888a, 3, "Worm in Paradise /SD (C-64)",
+    3, 0x7363, 0x65, 0xa0ab, 3, "Snowball /SD (C-64/MSX)",
+    3, 0x772f, 0xca, 0x8602, 3, "Return to Eden /SD (C-64/MSX)",
+    3, 0x788d, 0x72, 0x888a, 3, "Worm in Paradise /SD (C-64/MSX)",
 
     3, 0x6bf8, 0x3f, 0xc9f7, 3, "Snowball /SD (Atari)",
     3, 0x60f7, 0x68, 0xc2bc, 3, "Return to Eden /SD (Atari)",
@@ -408,10 +413,14 @@ version_table[] =
     3, 0x8251, 0x5f, 0x862a, 0, "Adrian Mole I, pt. 3 (C-64)",
     3, 0x7a78, 0x5e, 0x6ea3, 0, "Adrian Mole I, pt. 4 (C-64)",
 
-    WANTED + 3, 0x8324, 0x87, 0x0000, 0, "Adrian Mole I, pt. 1 (MSX)",
-    WANTED + 3, 0x8442, 0x0f, 0x0000, 0, "Adrian Mole I, pt. 2 (MSX)",
-    WANTED + 3, 0x0000, 0x00, 0x0000, 0, "Adrian Mole I, pt. 3 (MSX)",
-    WANTED + 3, 0x0000, 0x00, 0x0000, 0, "Adrian Mole I, pt. 4 (MSX)",
+    3, 0x8324, 0x87, 0xb9ae, 0, "Adrian Mole I, pt. 1 (MSX *corrupt*)",
+    3, 0x8324, 0x87, 0x2736, 0, "Adrian Mole I, pt. 1 (MSX *fixed*)",
+    3, 0x8442, 0x0f, 0x8e7a, 0, "Adrian Mole I, pt. 2 (MSX *corrupt*)",
+    3, 0x8442, 0x0f, 0xe1f7, 0, "Adrian Mole I, pt. 2 (MSX *fixed*)",
+    3, 0x823e, 0x5c, 0x82d9, 0, "Adrian Mole I, pt. 3 (MSX)",
+    3, 0x824e, 0x77, 0xffa3, 0, "Adrian Mole I, pt. 3 (MSX *reconstructed*)",
+    3, 0x7a71, 0xfb, 0x945e, 0, "Adrian Mole I, pt. 4 (MSX)",
+    3, 0x7a75, 0xe3, 0x6cee, 0, "Adrian Mole I, pt. 4 (MSX *reconstructed*)",
 
     3, 0x7c6f, 0x0f, 0xba24, 0, "Adrian Mole I, pt. 1 (CPC)",
     WANTED + 3, 0x0000, 0x00, 0x0000, 0, "Adrian Mole I, pt. 2 (CPC)",
@@ -440,20 +449,15 @@ version_table[] =
  *  V3 Growing Pains of Adrian Mole, (c) 86 Level 9/Virgin Games
  */
 
-    3, 0x7931, 0xb9, 0xc51b, 0, "Adrian Mole II, pt. 1 (C-64/CPC)",
-    3, 0x7cdf, 0xa5, 0x43e3, 0, "Adrian Mole II, pt. 2 (C-64/CPC)",
-    3, 0x7a0c, 0x97, 0x4bea, 0, "Adrian Mole II, pt. 3 (C-64/CPC)",
-    3, 0x7883, 0xe2, 0xee0e, 0, "Adrian Mole II, pt. 4 (C-64/CPC)",
+    3, 0x7931, 0xb9, 0xc51b, 0, "Adrian Mole II, pt. 1 (C-64/CPC/MSX)",
+    3, 0x7cdf, 0xa5, 0x43e3, 0, "Adrian Mole II, pt. 2 (C-64/CPC/MSX)",
+    3, 0x7a0c, 0x97, 0x4bea, 0, "Adrian Mole II, pt. 3 (C-64/CPC/MSX)",
+    3, 0x7883, 0xe2, 0xee0e, 0, "Adrian Mole II, pt. 4 (C-64/CPC/MSX)",
 
     3, 0x6841, 0x4a, 0x94e7, 0, "Adrian Mole II, pt. 1 (Speccy)",
     3, 0x6bc0, 0x62, 0xab3d, 0, "Adrian Mole II, pt. 2 (Speccy)",
     3, 0x692c, 0x21, 0x2015, 0, "Adrian Mole II, pt. 3 (Speccy)",
     3, 0x670a, 0x94, 0xa2a6, 0, "Adrian Mole II, pt. 4 (Speccy)",
-
-    WANTED + 3, 0x0000, 0x00, 0x0000, 0, "Adrian Mole II, pt. 1 (MSX)",
-    WANTED + 3, 0x0000, 0x00, 0x0000, 0, "Adrian Mole II, pt. 2 (MSX)",
-    WANTED + 3, 0x0000, 0x00, 0x0000, 0, "Adrian Mole II, pt. 3 (MSX)",
-    WANTED + 3, 0x0000, 0x00, 0x0000, 0, "Adrian Mole II, pt. 4 (MSX)",
 
     3, 0x593a, 0xaf, 0x30e9, 0, "Adrian Mole II, pt. 1 (BBC)",
     3, 0x57e6, 0x8a, 0xc41a, 0, "Adrian Mole II, pt. 2 (BBC)",
@@ -464,10 +468,11 @@ version_table[] =
  *  V3 The Archers, (c) ? Level 9/Mosaic
  */
 
-    3, 0x765d, 0xcd, 0xfc02, 0, "The Archers, pt. 1 (C-64)",
+    3, 0x765d, 0xcd, 0xfc02, 0, "The Archers, pt. 1 (C-64/MSX)",
     3, 0x6e58, 0x07, 0xbffc, 0, "The Archers, pt. 2 (C-64)",
-    3, 0x7e98, 0x6a, 0x95e5, 0, "The Archers, pt. 3 (C-64)",
-    3, 0x81e2, 0xd5, 0xb278, 0, "The Archers, pt. 4 (C-64)",
+    3, 0x6e56, 0x17, 0x477d, 0, "The Archers, pt. 2 (MSX)",
+    3, 0x7e98, 0x6a, 0x95e5, 0, "The Archers, pt. 3 (C-64/MSX)",
+    3, 0x81e2, 0xd5, 0xb278, 0, "The Archers, pt. 4 (C-64/MSX)",
 
     3, 0x6ce5, 0x58, 0x46de, 0, "The Archers, pt. 1 (Speccy)",
     3, 0x68da, 0xc1, 0x3b8e, 0, "The Archers, pt. 2 (Speccy)",
@@ -483,11 +488,6 @@ version_table[] =
     WANTED + 3, 0x0000, 0x00, 0x0000, 0, "The Archers, pt. 2 (CPC)",
     WANTED + 3, 0x0000, 0x00, 0x0000, 0, "The Archers, pt. 3 (CPC)",
     WANTED + 3, 0x0000, 0x00, 0x0000, 0, "The Archers, pt. 4 (CPC)",
-
-    WANTED + 3, 0x0000, 0x00, 0x0000, 0, "The Archers, pt. 1 (MSX)",
-    WANTED + 3, 0x0000, 0x00, 0x0000, 0, "The Archers, pt. 2 (MSX)",
-    WANTED + 3, 0x0000, 0x00, 0x0000, 0, "The Archers, pt. 3 (MSX)",
-    WANTED + 3, 0x0000, 0x00, 0x0000, 0, "The Archers, pt. 4 (MSX)",
 
 
 /*---------------------------> V3a ("V5") <-----------------------*/
@@ -587,6 +587,11 @@ version_table[] =
  *  V4 Knight Orc UK version, (c) 87 Level 9/Rainbird
  */
 
+    4, 0xb92d, 0x00, 0x46cc, 0, "Knight Orc, pt. 1 (MSX *corrupt*)",
+    4, 0xb92d, 0x25, 0xd86d, 3, "Knight Orc, pt. 1 (MSX)",
+    4, 0xb734, 0xbc, 0x6729, 3, "Knight Orc, pt. 2 (MSX)",
+    4, 0xba02, 0x5f, 0x2078, 3, "Knight Orc, pt. 3 (MSX)",
+
     4, 0xbb93, 0x36, 0x6a05, 3, "Knight Orc, pt. 1 (Amiga)",
     4, 0xbb6e, 0xad, 0x4d40, 3, "Knight Orc, pt. 1 (ST)",
     4, 0xc58e, 0x4a, 0x4e9d, 3, "Knight Orc, pt. 2 (Amiga/ST)",
@@ -641,9 +646,9 @@ version_table[] =
     WANTED + 4, 0x0000, 0x00, 0x0000, 3, "Gnome Ranger, pt. 2 (Mac)",
     WANTED + 4, 0x0000, 0x00, 0x0000, 3, "Gnome Ranger, pt. 3 (Mac)",
 
-    4, 0xad41, 0xa8, 0x42c5, 3, "Gnome Ranger, pt. 1 (C-64 TO)",
-    4, 0xa735, 0xf7, 0x2e08, 3, "Gnome Ranger, pt. 2 (C-64 TO)",
-    4, 0xa9c0, 0x9e, 0x0d70, 3, "Gnome Ranger, pt. 3 (C-64 TO)",
+    4, 0xad41, 0xa8, 0x42c5, 3, "Gnome Ranger, pt. 1 (C-64 TO/MSX)",
+    4, 0xa735, 0xf7, 0x2e08, 3, "Gnome Ranger, pt. 2 (C-64 TO/MSX)",
+    4, 0xa9c0, 0x9e, 0x0d70, 3, "Gnome Ranger, pt. 3 (C-64 TO/MSX)",
 
     4, 0x908e, 0x0d, 0x58a7, 3, "Gnome Ranger, pt. 1 (C-64 Gfx)",
     4, 0x8f6f, 0x0a, 0x411a, 3, "Gnome Ranger, pt. 2 (C-64 Gfx)",
@@ -688,6 +693,10 @@ version_table[] =
     4, 0xa67c, 0xb8, 0xff41, 3, "Red Moon /T&M (Mac)",
     4, 0xbab2, 0x87, 0x09f5, 3, "Price of Magik /T&M (Mac)",
 
+    4, 0xb393, 0x11, 0x25e7, 3, "Lords of Time /T&M (MSX)",
+    4, 0xa4d8, 0xd9, 0xb1eb, 3, "Red Moon /T&M (MSX)",
+    4, 0xb8b5, 0x27, 0x461a, 3, "Price of Magik /T&M (MSX)",
+
     4, 0xb38c, 0x37, 0x9f8e, 3, "Lords of Time /T&M (C-64 TO)",
     4, 0xa4e2, 0xa6, 0x016d, 3, "Red Moon /T&M (C-64 TO)",
     4, 0xb451, 0xa8, 0x2682, 3, "Price of Magik /T&M (C-64 TO)",
@@ -729,9 +738,9 @@ version_table[] =
     4, 0xd5d7, 0x99, 0x770b, 3, "Lancelot, pt. 2 (Mac)",
     4, 0xbb7d, 0x17, 0xbc42, 3, "Lancelot, pt. 3 (Mac)",
 
-    4, 0xb4c9, 0x94, 0xd784, 3, "Lancelot, pt. 1 (C-64 TO)",
-    4, 0xb729, 0x51, 0x8ee5, 3, "Lancelot, pt. 2 (C-64 TO)",
-    4, 0xb702, 0xe4, 0x1809, 3, "Lancelot, pt. 3 (C-64 TO)",
+    4, 0xb4c9, 0x94, 0xd784, 3, "Lancelot, pt. 1 (C-64 TO/MSX)",
+    4, 0xb729, 0x51, 0x8ee5, 3, "Lancelot, pt. 2 (C-64 TO/MSX)",
+    4, 0xb702, 0xe4, 0x1809, 3, "Lancelot, pt. 3 (C-64 TO/MSX)",
 
     4, 0x8feb, 0xba, 0xa800, 3, "Lancelot, pt. 1 (C-64 Gfx)",
     4, 0x8f6b, 0xfa, 0x0f7e, 3, "Lancelot, pt. 2 (C-64 Gfx)",
@@ -760,6 +769,9 @@ version_table[] =
 /*
  *  V4 Ingrid's Back UK version, (c) 88 Level 9
  */
+    4, 0xbefa, 0x1e, 0x2cdd, 3, "Ingrid's Back, pt. 1 (MSX)",
+    4, 0xbd57, 0x14, 0x7fe7, 3, "Ingrid's Back, pt. 2 (MSX)",
+    4, 0xbf4b, 0x9f, 0xad8c, 3, "Ingrid's Back, pt. 3 (MSX)",
 
     4, 0xd19b, 0xad, 0x306d, 3, "Ingrid's Back, pt. 1 (PC)",
     4, 0xc5a5, 0xfe, 0x3c98, 3, "Ingrid's Back, pt. 2 (PC)",
@@ -804,9 +816,9 @@ version_table[] =
     4, 0x99bd, 0x65, 0x032e, 0, "Scapeghost, pt. 2 (Amiga/PC/ST)",
     4, 0xbcb6, 0x7a, 0x7d4f, 0, "Scapeghost, pt. 3 (Amiga/PC/ST)",
 
-    WANTED + 4, 0x0000, 0x00, 0x0000, 0, "Scapeghost, pt. 1 (C-64 TO)",
-    WANTED + 4, 0x0000, 0x00, 0x0000, 0, "Scapeghost, pt. 2 (C-64 TO)",
-    WANTED + 4, 0x0000, 0x00, 0x0000, 0, "Scapeghost, pt. 3 (C-64 TO)",
+    4, 0xb613, 0x4c, 0x6311, 0, "Scapeghost, pt. 1 (C-64 TO/MSX *converted*)",
+    4, 0x97c0, 0x48, 0xbf7f, 0, "Scapeghost, pt. 2 (C-64 TO/MSX *converted*)",
+    4, 0xb60e, 0x6a, 0x7eac, 0, "Scapeghost, pt. 3 (C-64 TO/MSX *converted*)",
 
     4, 0x9058, 0xcf, 0x9748, 0, "Scapeghost, pt. 1 (C-64 Gfx)",
     4, 0x8f43, 0xc9, 0xeefd, 0, "Scapeghost, pt. 2 (C-64 Gfx)",

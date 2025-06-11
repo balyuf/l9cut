@@ -1,6 +1,6 @@
 #define PRGNAME "L9Cut"
-#define PRGVERSION "3.13"
-#define PRGDATE "21.10.2002"
+#define PRGVERSION "3.13-msx"
+#define PRGDATE "03.12.2020"
 
 /*
  *  l9cut.c
@@ -14,6 +14,8 @@
  *          David Kinder <D.Kinder@btinternet.com>
  *          Miron Schmidt <miron.schmidt@berlin.de>
  *          Alan Staniforth <alan@apollonia.org>
+ *  archived at: https://ifarchive.org/indexes/if-archive/level9/tools/
+ *  expanded upon for MSX: https://github.com/balyuf/l9cut.git
  *
  *  v1.0:    31 Jul 1996
  *  v1.1:     5 Aug 1996  version database added
@@ -667,10 +669,11 @@ v2_recognition (void)
 #endif
 
   for (i = 0; i < (snalength - 20); i++)
-    if ((calcword (i + 4) == 0x0020) &&
-	(calcword (i + 0x0a) == 0x8000) &&
+    if (((calcword (i + 4) == 0x0020) || (calcword (i + 6) == 0x0020)) &&
+	((calcword (i + 8) == 0x8000) || (calcword (i + 0x0a) == 0x8000)) &&
 	(calcword (i + 0x14) == calcword (i + 0x16)))
 /*
+   condition 1 and 2 first alternatives are exceptional with Colossal V2 for MSX
    condition 3 is a hack based on currently known V2 datafiles; there
    may be a better solution: e.g. byte (i+0x19) must be 0x80...0x82
  */
