@@ -1,0 +1,1 @@
+The l9cut tool extracts Level 9 game data files from a variety of binary formats.  This version expands the database with all MSX variants of the games, and now also includes l9pic, a tool to extract pictures from simple binary formats.
