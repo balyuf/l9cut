@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /*
-   l9dis.c
+   l9pic.c version 0.1
 
    - extracts Level 9 pictures
 

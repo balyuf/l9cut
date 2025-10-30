@@ -1,4 +1,4 @@
-#define BASEVERSION "050-msx"
+#define BASEVERSION "051"
 
 /*
  *  l9data_d.h

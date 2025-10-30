@@ -1,6 +1,6 @@
 #define PRGNAME "L9Cut"
-#define PRGVERSION "3.13-msx"
-#define PRGDATE "03.12.2020"
+#define PRGVERSION "3.14"
+#define PRGDATE "30.10.2025"
 
 /*
  *  l9cut.c
